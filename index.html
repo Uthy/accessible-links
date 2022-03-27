@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessible New Window Links</title>
-    
+
     <style>
-[target="_blank"] {
-position: relative;
-}
-
-[target="_blank"]:after {
-content: attr(data-label);
-display: none;
-position: absolute;
-top: 110%;
-left: 10px;
-padding: 8px 10px;
-z-index: 200;
-line-height: 15px;
-white-space: nowrap;
-text-decoration: none;
-text-indent: 0;
-overflow: visible;
-font-family: Roboto, 'sans-serif' !important;
-font-size: 12px;
-font-weight: normal;
-color: #fff;
-text-shadow: 1px 0 1px #888;
-background-color: #000000;
-border-left: 6px solid #9b8a5b;
--webkit-border-radius: 2px;
-border-radius: 2px;
--webkit-box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
-box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
-}
-
-[target="_blank"]:hover:after, [target="_blank"]:focus:after {
-display: block;
-}					
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 100%;
+        }
+        
+        [target="_blank"] {
+            position: relative;
+        }
+        
+        [target="_blank"]:after {
+            content: attr(data-label);
+            display: none;
+            position: absolute;
+            top: 110%;
+            left: 10px;
+            padding: 8px 10px;
+            z-index: 200;
+            line-height: 15px;
+            white-space: nowrap;
+            text-decoration: none;
+            text-indent: 0;
+            overflow: visible;
+            font-family: Roboto, 'sans-serif' !important;
+            font-size: 12px;
+            font-weight: normal;
+            color: #fff;
+            text-shadow: 1px 0 1px #888;
+            background-color: #000000;
+            border-left: 6px solid #9b8a5b;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        [target="_blank"]:hover:after,
+        [target="_blank"]:focus:after {
+            display: block;
+        }
     </style>
 </head>
+
 <body>
     <div style="width: 300px;">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-  Ut enim ad minim veniam 
-  <a href="#" target="_blank" aria-label="Link Desctiption" data-label="This link opens in a new tab">Hover me</a> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        <a href="#" target="_blank" aria-label="Link Desctiption" data-label="This link opens in a new tab">Hover me</a> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. </div>
 </body>
+
 </html>
